@@ -730,6 +730,11 @@ impl PySessionContext {
         Ok(())
     }
 
+    pub fn register_json_functions(&mut self) -> PyResult<()> {
+        datafusion_functions_json::register_all(&mut self.ctx)?;
+        Ok(())
+    }
+
     #[pyo3(signature = (name="datafusion"))]
     pub fn catalog(&self, name: &str) -> PyResult<PyCatalog> {
         match self.ctx.catalog(name) {

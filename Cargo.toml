@@ -55,6 +55,7 @@ parking_lot = "0.12"
 regex-syntax = "0.8.1"
 syn = "2.0.43"
 url = "2.2"
+datafusion-functions-json = "0.1.2"
 
 [build-dependencies]
 pyo3-build-config = "0.20.0"
